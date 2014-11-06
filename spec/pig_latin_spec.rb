@@ -60,4 +60,9 @@ describe PigLatin do
     translation = PigLatin.new("The quick, brown fox.").translate
     expect(translation).to be == "Ethay ickquay, ownbray oxfay."
   end
+
+  it "does all that and handles 2 sentences" do
+    translation = PigLatin.new("The quick, brown fox. The quick, brown fox.").translate
+    expect(translation).to be == "Ethay ickquay, ownbray oxfay. Ethay ickquay, ownbray oxfay."
+  end
 end
